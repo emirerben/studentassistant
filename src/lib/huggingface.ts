@@ -1,6 +1,6 @@
 import { HfInference } from '@huggingface/inference';
 
-console.log("API Key:", process.env.HUGGINGFACE_API_KEY); // Add this line
+// console.log("API Key:", process.env.HUGGINGFACE_API_KEY); // Add this line
 
 const hf = new HfInference(process.env.HUGGINGFACE_API_KEY);
 
