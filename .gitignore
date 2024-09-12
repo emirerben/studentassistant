@@ -35,3 +35,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Virtual environment
+flan-t5-finetuning/venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Model checkpoints and results (these can be large)
+flan-t5-finetuning/results/
+flan-t5-finetuning/fine_tuned_model/
+
+# Logs
+flan-t5-finetuning/logs/
