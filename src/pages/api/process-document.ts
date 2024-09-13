@@ -33,12 +33,12 @@ Events:`;
 
     const [todoResult, eventResult] = await Promise.all([
       hf.textGeneration({
-        model: 'google/flan-t5-large',
+        model: 'emirerben/flan-t5-finetuning',
         inputs: todoPrompt,
         parameters: { max_new_tokens: 250, temperature: 0.7 },
       }),
       hf.textGeneration({
-        model: 'google/flan-t5-large',
+        model: 'emirerben/flan-t5-finetuning',
         inputs: eventPrompt,
         parameters: { max_new_tokens: 250, temperature: 0.7 },
       }),

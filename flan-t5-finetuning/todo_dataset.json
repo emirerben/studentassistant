@@ -1,0 +1,14 @@
+[
+    {
+      "input": "Today I have to play football at night, see my teacher for lunch and finish this project",
+      "output": "- Play football at night\n- See teacher for lunch\n- Finish this project"
+    },
+    {
+      "input": "This course contains 5 programming projects. The first three focus on web apps, while the last two focus on web distributed systems and web semantics.",
+      "output": "- Complete web app projects (3)\n- Complete web distributed systems project\n- Complete web semantics project"
+    },
+    {
+      "input": "Select a teammate, complete the quiz, finish this assignment, finish their reading by tomorrow",
+      "output": "- Select a teammate\n- Complete the quiz\n- Finish this assignment\n- Finish reading by tomorrow"
+    }
+  ]
