@@ -42,11 +42,17 @@ print("First few examples:", dataset[:2])
 
 # Preprocess the dataset
 def preprocess_function(examples):
-    inputs = ["Generate todo list: " + doc for doc in examples["input"]]
+    inputs = ["Convert to todo list: " + doc for doc in examples["input"]]
     model_inputs = tokenizer(inputs, max_length=512, truncation=True, padding="max_length")
     
     with tokenizer.as_target_tokenizer():
-        labels = tokenizer(examples["output"], max_length=128, truncation=True, padding="max_length")
+        outputs = []
+        for output in examples["output"]:
+            items = output.split(",")
+            formatted_items = ["TODO: " + item.strip() for item in items]
+            outputs.append("\n".join(formatted_items))
+        
+        labels = tokenizer(outputs, max_length=128, truncation=True, padding="max_length")
     
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs

@@ -10,5 +10,17 @@
     {
       "input": "Select a teammate, complete the quiz, finish this assignment, finish their reading by tomorrow",
       "output": "- Select a teammate\n- Complete the quiz\n- Finish this assignment\n- Finish reading by tomorrow"
+    },
+    {
+      "input": "Korean BBQ tonight, Startup soon, Graduation this year",
+      "output": "TODO: Korean BBQ tonight\nTODO: Startup soon\nTODO: Graduation this year"
+    },
+    {
+      "input": "Buy groceries, Call mom, Finish report",
+      "output": "TODO: Buy groceries\nTODO: Call mom\nTODO: Finish report"
+    },
+    {
+      "input": "Gym at 6PM, Team meeting at 2PM, Dinner with friends",
+      "output": "TODO: Gym at 6PM\nTODO: Team meeting at 2PM\nTODO: Dinner with friends"
     }
   ]

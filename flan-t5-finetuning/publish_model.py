@@ -29,3 +29,17 @@ model.push_to_hub(f"{hf_username}/{model_name}")
 tokenizer.push_to_hub(f"{hf_username}/{model_name}")
 
 print(f"Model published to: https://huggingface.co/{hf_username}/{model_name}")
+
+def process_todo_output(output):
+    return [item.replace("TODO: ", "").strip() for item in output.split('\n') if item.startswith("TODO:")]
+
+# Test the model
+input_text = "Convert to todo list: Korean BBQ tonight, Startup soon, Graduation this year"
+input_ids = tokenizer(input_text, return_tensors="pt").input_ids
+
+outputs = model.generate(input_ids, max_length=100, num_return_sequences=1, do_sample=True, temperature=0.7)
+decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
+print("Raw output:", decoded_output)
+
+processed_todos = process_todo_output(decoded_output)
+print("Processed todos:", processed_todos)
